@@ -1,8 +1,6 @@
-FROM python:3.12-slim-bullseye
+FROM python:3.12-slim-bookworm
 
-RUN apt-get update 
-
-RUN apt-get install -y git
+RUN apt-get update && apt-get install -y git
 
 COPY entrypoint.py /entrypoint.py
 
